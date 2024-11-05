@@ -1,0 +1,186 @@
+---
+title             : "Need for Cognition and Burnout in healthcare: The mediating role of self-control, emotion regulation, and coping strategies"
+shorttitle        : "NFC and Burnout in healthcare"
+
+author: 
+  - name          : "Kea Rüter"
+    affiliation   : "1"
+    role: # Contributorship roles (e.g., CRediT, https://credit.niso.org/)
+      - "Writing - Original Draft"
+      - "Data Curation"
+      - "Formal Analysis"
+  - name          : "Alexander Strobel"
+    affiliation   : "2"
+    role:
+      - "Conceptualization"
+      - "Writing - Review & Editing"
+      - "Supervision"
+  - name          : "Anja Strobel"
+    affiliation   : "1"
+    corresponding : yes
+    address       : "Technische Universität Chemnitz, Department of Psychology, Wilhelm-Raabe-Straße 43, 09120 Chemnitz, Germany"
+    email         : "anja.strobel@psychologie.tu-chemnitz.de"
+    
+    role:
+      - "Conceptualization"
+      - "Writing - Review & Editing"
+      - "Supervision"
+
+affiliation:
+  - id            : "1"
+    institution   : "Department of Psychology, Technische Universität Chemnitz, Chemnitz, Germany"
+  - id            : "2"
+    institution   : "Faculty of Psychology, Technische Universität Dresden, Dresden, Germany"
+
+authornote: |
+  Alexander Strobel: https://orcid.org/0000-0002-9426-5397
+  
+  Anja Strobel: https://orcid.org/0000-0002-0313-0615 
+   
+
+
+abstract: |
+  Burnout has emerged as a global health concern, with its prevalence notably increasing during the COVID-19 pandemic. 
+  This especially occurs among individuals working within the field of healthcare. 
+  In order to contribute to the improvement of working conditions and mental health, this study replicates a mediation model previously tested by Grass et al. (2018) among teaching students and by Zerna, Engelmann et al. (2022) among teachers. 
+  For this purpose, multiple mediation models, using a sample of N = 642 healthcare workers were examined. 
+  The incorporated predictor was Need for Cognition (an intrinsic motivation to engage with cognitively demanding thoughts). 
+  Mediators were self-control, the emotion regulation strategies reappraisal and suppression, as well as adaptive and maladaptive coping strategies. 
+  The burnout subdimensions reduced personal efficacy, emotional exhaustion, and depersonalization each functioned individually as outcome variables. 
+  In addition to the mediation analyses, correlation analyses of these variables were also calculated. 
+  The results confirmed that adaptive coping strategies functioned preventively across all burnout dimensions. 
+  Furthermore, reappraisal and maladaptive coping mediated the relationship between NFC and some subdimensions of burnout. 
+  Healthcare workers who tended towards higher NFC appeared to be protected from burnout development due to various tested mediators. 
+  Regarding the daily work environment, initial evidence suggests that efforts should be made to particularly promote adaptive coping strategies. 
+  Future studies should further examine the link between NFC and burnout among healthcare professionals.
+  
+keywords          : "Need for Cognition, burnout, self-control, emotion regulation, coping"
+wordcount         : "X"
+
+bibliography      : 
+  - "r-references.bib"
+  - "NFC-Caregiver.bib"
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+classoption       : "man"
+csl               : "apa7.csl"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")  # for manuscript creation
+library("psych")   # for descriptive statistics and correlation analysis
+library("lavaan")  # for mediation analysis
+library("here")    # for avoiding path edits
+
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(242)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+Burnout is a psychological, work-related stress syndrome and a global health concern [@maslach_job_2003, @parandeh_prevalence_2022]. 
+It correlates with depression (Bianchi et al., 2015), increased alcohol abuse (Oreskovich, 2012), and a heightened risk of suicidal thoughts (Shanafelt et al., 2011). 
+As a response to excessive work stress (Maslach, 1998), burnout affects not only individuals but also their workplace (West et al., 2018), leading to decreased productivity (Dewa et al., 2017), reduced job satisfaction, and intentions to leave the profession (Shanafelt et al., 2009).
+
+Occupational stress is a growing problem, especially among healthcare workers (Hassan et al., 2020).
+Challenges like time constraints, lack of control, and competing demands are significant job strains (Lyndon, 2015).
+The COVID-19 pandemic further exacerbated burnout rates (Galanis et al., 2021; Prasad et al., 2021), as healthcare workers faced higher health risks, increased workloads, inadequate equipment, and limited resources.
+These strains impacted not only the workers but also the quality of patient care, leading to lower patient satisfaction and increased medical errors (West et al., 2018).
+
+The rising number of burnout cases underscores its significance in today's society.
+Despite extensive research, the exact causes and antecedents of burnout are not fully understood. 
+This study investigates the relationship between burnout, its underlying mechanisms, and protective factors, extending previous research on factors mediating the role of cognitive motivation in burnout (Grass et al., 2018; Zerna et al., 2022) from aspiring and experienced teachers to healthcare professionals. 
+The following section explains the mediation model and its variables.
+
+## Theoretical Framework
+
+...
+
+# Methods
+We report how we determined our sample size, all data exclusions, all manipulations, and all measures in the study [cf. @Simmons-2012]. 
+
+## Study design
+The preregistration of the current study is available at https://osf.io/d6y9k.
+Data acquisition took place at two separate assessment occasions [@Kadur-2018; @Ziessler-2019]. 
+Data were assessed via anonymous, cross-sectional online surveys using the Enterprise Feedback Suite Survey platform [EFS, @Questback-2017]. 
+Participants were informed about the study’s objectives, duration, and data security.
+Further, they were given the opportunity to participate in a cash raffle, where €25 were handed out to two participants for every 100 individuals who took part in the study. 
+As additional reimbursement, participants were offered to receive the study results on request as well as information on the personal and work-related risk factors of burnout.
+Before the subjects reported demographic information and completed the questionnaires, participants declared their consent for data security and study participation. 
+At the end of the survey, a control item was included to ensure that participants indicated whether they answered the questions sincerely. 
+Finally, those interested in the raffle could provide their email address which was recorded separately from the scientific data.
+
+## Participants
+...
+
+## Material
+
+All questionnaires used were administered in German language. 
+The reliabilities (MacDonald’s $\omega$ and Cronbach’s $\alpha$) of the inventories used can be found in Table 1.
+The burnout dimensions *reduced personal efficiency*, *emotional exhaustion*, and *depersonalization* were assessed using the German version of the 22-item Maslach Burnout Inventory [MBI-D, @Buessing-1992]. 
+Items such as “I feel burned out by my job.” were rated on a scale from 1 (does not occur at all) to 6 (occurs very often/strongly). 
+The internal consistencies of the MBI-D showed good to excellent reliabilities (MacDonald’s $\omega$ > .82). 
+For clearer classification of each subdimension's individual expressions, @Dreher-2019 provided specific values, where high burnout expression is classsified at rPE values > 24, EE values > 22, and DE values > 8.
+NFC was assessed with the 16-item short version of the German NFC scale [NCS, @Bless-1994] with items like “I like it when my life is full of tricky tasks that I have to solve.” These items were rated on a seven-point rating scale ranging from +3 (very accurate) to –3 (completely inaccurate). 
+The scale demonstrated an excellent internal consistency of MacDonald’s Omega $\omega$ > .91. 
+Self-control was measured by the 13-item short form of the Self-Control Scale [SCS-K-D, @Bertrams-2009]. 
+Here, a five-point Likert scale from 1 (completely inaccurate) to 5 (completely accurate) was used to answer questions like "I am good at resisting temptations."
+This scale showed an acceptable internal consistency of MacDonald’s $\omega$ > .79.
+Further, the Emotion Regulation Questionnaire [ERQ-D, @Abler-2009], which included 10 items, was used to assess reappraisal and suppression. Reappraisal was measured by items like "When I get into a stressful situation, I change my thoughts about the situation, so it calms me down." 
+Suppression was determined by items such as "I keep my feelings to myself." 
+Participants responded on a scale ranging from 1 (not true at all) to 7 (absolutely true).
+The subscale that assessed reappraisal contained six items and achieved good reliability (MacDonald’s $\omega$ > .86).
+The four-item suppression subscale of the ERQ-D also reached good reliability with MacDonald’s $\omega$ > .81.
+Finally (and differing from the material used by @Grass-2018), the 20-item Stress and Coping Inventory [SCI, @Satow-2012] was used to measure adaptive as well as maladaptive coping strategies.
+Adaptive coping was assessed by the subscales “positive thinking”, “active stress management”, “social support”, and “holding on to faith”. 
+These subscales, consisting of 16 items such as "When stress and pressure arise, I directly address the causes," altogether demonstrated an internal consistency of MacDonald’s Omega $\omega$ > .85. 
+Maladaptive coping was measured with the “increased alcohol and cigarette consumption” subscale, containing items like "When I am under too much stress, I smoke a cigarette." The items were rated from 1 (does not apply) to 4 (applies exactly). 
+This subscale had a questionable internal consistency of MacDonald’s Omega $\omega$ > .63.
+
+## Procedure
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+```{r data, echo = F} 
+here::i_am("flag_root_for_NFC-Caregiver.txt")
+
+data_ZK <- readRDS(here("Data", "NFC-Caregiver_DataAnalysis.RDS"))
+
+```
+
+# Results
+
+```{r descriptives}
+
+omg2txt <- function(df) {
+  options( warn = -1 )
+  out = sub("0.", ".", format(round(psych::omega(df)$omega.tot, 2), nsmall = 2))
+  return(out)
+}
+
+
+```
+
+
+# Discussion
+
+Omega was `r ogm2txt(df)`
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
