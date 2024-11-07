@@ -87,6 +87,9 @@ r_refs("r-references.bib")
 # Seed for random number generation
 set.seed(242)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+
+# locate relevant folder
+here::i_am("flag_root_for_NFC-Caregiver.txt")
 ```
 
 Burnout is a psychological, work-related stress syndrome and a global health concern [@maslach_job_2003, @parandeh_prevalence_2022]. 
@@ -126,6 +129,19 @@ Finally, those interested in the raffle could provide their email address which 
 
 ## Material
 
+```{r omega}
+preprocessed_data <- readRDS(here("Data", "NFC-Caregiver_DataAnalysis.RDS"))
+
+omg2txt <- function(df) {
+  options( warn = -1 )
+  out = sub("0.", ".", format(round(psych::omega(df)$omega.tot, 2), nsmall = 2))
+  return(out)
+}
+
+omg_nfc = omg2txt(preprocessed_data[, grep("nfc_", colnames(preprocessed_data))])
+```
+
+
 All questionnaires used were administered in German language. 
 The reliabilities (MacDonald’s $\omega$ and Cronbach’s $\alpha$) of the inventories used can be found in Table 1.
 The burnout dimensions *reduced personal efficiency*, *emotional exhaustion*, and *depersonalization* were assessed using the German version of the 22-item Maslach Burnout Inventory [MBI-D, @Buessing-1992]. 
@@ -133,7 +149,7 @@ Items such as “I feel burned out by my job.” were rated on a scale from 1 (d
 The internal consistencies of the MBI-D showed good to excellent reliabilities (MacDonald’s $\omega$ > .82). 
 For clearer classification of each subdimension's individual expressions, @Dreher-2019 provided specific values, where high burnout expression is classsified at rPE values > 24, EE values > 22, and DE values > 8.
 NFC was assessed with the 16-item short version of the German NFC scale [NCS, @Bless-1994] with items like “I like it when my life is full of tricky tasks that I have to solve.” These items were rated on a seven-point rating scale ranging from +3 (very accurate) to –3 (completely inaccurate). 
-The scale demonstrated an excellent internal consistency of MacDonald’s Omega $\omega$ > .91. 
+The scale demonstrated an excellent internal consistency of MacDonald’s $\omega$ > `r omg_nfc`. 
 Self-control was measured by the 13-item short form of the Self-Control Scale [SCS-K-D, @Bertrams-2009]. 
 Here, a five-point Likert scale from 1 (completely inaccurate) to 5 (completely accurate) was used to answer questions like "I am good at resisting temptations."
 This scale showed an acceptable internal consistency of MacDonald’s $\omega$ > .79.
@@ -154,9 +170,10 @@ This subscale had a questionable internal consistency of MacDonald’s Omega $\o
 We used `r cite_r("r-references.bib")` for all our analyses.
 
 ```{r data, echo = F} 
-here::i_am("flag_root_for_NFC-Caregiver.txt")
 
-data_ZK <- readRDS(here("Data", "NFC-Caregiver_DataAnalysis.RDS"))
+
+
+data <- load(here("Data", "NFC-Caregiver_Data.Rdata"))
 
 ```
 
@@ -166,7 +183,7 @@ data_ZK <- readRDS(here("Data", "NFC-Caregiver_DataAnalysis.RDS"))
 
 omg2txt <- function(df) {
   options( warn = -1 )
-  out = sub("0.", ".", format(round(psych::omega(df)$omega.tot, 2), nsmall = 2))
+  out = sub("0.", ".", format(round(psych::omega(df, plot = F)$omega.tot, 2), nsmall = 2))
   return(out)
 }
 
@@ -176,7 +193,6 @@ omg2txt <- function(df) {
 
 # Discussion
 
-Omega was `r ogm2txt(df)`
 
 \newpage
 

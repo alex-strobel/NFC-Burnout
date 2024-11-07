@@ -463,8 +463,8 @@ print(descriptives_maritalStatus)
 
 ## Maslach Burnout Inventory (MBI)
 # NOTE: Higher Chronbach's Alpha when outliers are not removed
-omega(mbi)
-omega(mbi_woOutliers)
+omg_mbi = omega(mbi)
+omg_mbi_woOutliers = omega(mbi_woOutliers)
 
 # MBI reduced personal efficacy (rpe)
 # NOTE: Higher Chronbach's Alpha when outliers are not removed
@@ -490,8 +490,8 @@ omega(mbi_de_columns_woOutliers)
 
 # Need for Cognition Scale
 # NOTE: Chronbach's Alpha is a little higher when outliers are removed
-omega(ncs)
-omega(ncs_woOutliers)
+omg_nfc = omega(ncs)
+omg_nfc_woOutliers = omega(ncs_woOutliers)
 
 
 ## Self Control Scale
